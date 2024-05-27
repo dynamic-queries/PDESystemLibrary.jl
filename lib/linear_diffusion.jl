@@ -15,7 +15,7 @@ function heat_1d1()
     @variables x t u(..)
     @parameters D
 
-    Dxx = Differential(x)
+    Dxx = Differential(x)^2
     Dt = Differential(t)
 
     eqs = [Dt(u(t, x)) ~ D * Dxx(u(t, x))]
